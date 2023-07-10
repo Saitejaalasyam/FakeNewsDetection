@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Result Page</title>
+  </head>
+  {% load static %}
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  <nav class="navbar navbar-dark bg-dark justify-content-center">
+    <div class="container" style="text-align:center;">
+      <a class="navbar-brand" href="" >
+        Accuracy of the Models
+      </a>
+    </div>
+      </nav>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 text-center" style="padding:30px;">
+  <div class="col-6">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+        <h3 class="card-title">MultinomialNB</h3>
+        <p class="card-text">{{ MN_Accuracy|safe }}%</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+        <h3 class="card-title">Passive Aggressive Classifier</h3>
+        <p class="card-text">{{ PAC_Accuracy|safe }}%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-2 row-cols-md-2 g-4 text-center" style="padding:30px;">
+
+  <div class="col-6">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+        <h3 class="card-title">Perceptron</h3>
+        <p class="card-text">{{ PER_Accuracy|safe }}%</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+        <h3 class="card-title">SGD Classifier</h3>
+        <p class="card-text">{{ SGD_Accuracy|safe }}%</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+  </body>
+</html>
